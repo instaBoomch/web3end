@@ -1,6 +1,6 @@
 import WalletConnectProvider from '@walletconnect/web3-provider'
 import { providers } from 'ethers'
-import Head from 'next/head'
+// import Head from 'next/head'
 import { useCallback, useEffect, useReducer } from 'react'
 import WalletLink from 'walletlink'
 import Web3Modal from 'web3modal'
@@ -111,8 +111,8 @@ function reducer(state: StateType, action: ActionType): StateType {
 
 export const MainPage = (): JSX.Element => {
   const [state, dispatch] = useReducer(reducer, initialState)
-  const { provider, web3Provider, address, chainId } = state
-
+  const { provider,  address, chainId } = state
+  // web3Provider
   const connect = useCallback(async function () {
     // This is the initial `provider` that is returned when
     // using web3Modal to connect. Can be MetaMask or WalletConnect.
@@ -202,7 +202,7 @@ export const MainPage = (): JSX.Element => {
   return (
     <div className="main-wrapper">
       <header className="header">
-        {/* {address && (
+        {address && (
           <div className="grid">
             <div>
               <p className="mb-1">Network:</p>
@@ -213,7 +213,7 @@ export const MainPage = (): JSX.Element => {
               <p>{ellipseAddress(address)}</p>
             </div>
           </div>
-        )} */}
+        )}
 
         <div className="container">
           <div className="header__body">
