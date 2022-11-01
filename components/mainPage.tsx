@@ -230,7 +230,7 @@ export const MainPage = (): JSX.Element => {
             </div>
             <div className="header__item">
               <a href="#" className="btn">
-                <img src="/img/pank.svg" alt />
+                <img src="/img/pank.svg"  />
                 <span>Buy TPAD</span>
               </a>
               <button className="btn" onClick={connect}>
@@ -246,10 +246,10 @@ export const MainPage = (): JSX.Element => {
           <div className="pad">
             <div className="pad__item pad-aside">
               <div className="pad-aside__header">
-                <img src="/img/crypto-logo.jpg" className="br50" alt />
+                <img src="/img/crypto-logo.jpg" className="br50"  />
                 <div>
                   <h1>SHUMI</h1>
-                  <img src="/img/open.svg" alt />
+                  <img src="/img/open.svg"  />
                 </div>
               </div>
               <div className="pad-aside__join">
@@ -295,7 +295,7 @@ export const MainPage = (): JSX.Element => {
             </div>
             <div className="pad__item pad-main">
               <div className="pad-main__header">
-                <img src="/img/crypto-logo.jpg" className="br50" alt />
+                <img src="/img/crypto-logo.jpg" className="br50"  />
                 <h3>SHUMI</h3>
               </div>
               <p className="pad-main__p">
@@ -303,16 +303,16 @@ export const MainPage = (): JSX.Element => {
                 Автоматическое начисление токенов на ваш баланс. Раздача 3 млрд
                 токенов SHUMI проходит в течении 24 часов.
               </p>
-              <img className="pad-main__img" src="/img/crypto-banner.jpg" alt />
+              <img className="pad-main__img" src="/img/crypto-banner.jpg"  />
               <div className="social">
                 <a href="#">
-                  <img src="/img/social/tg.svg" alt />
+                  <img src="/img/social/tg.svg"  />
                 </a>
                 <a href="#">
-                  <img src="/img/social/tw.svg" alt />
+                  <img src="/img/social/tw.svg"  />
                 </a>
                 <a href="#">
-                  <img src="/img/social/web.svg" alt />
+                  <img src="/img/social/web.svg"  />
                 </a>
               </div>
               <div className="pad-main__txt">
@@ -358,7 +358,7 @@ export const MainPage = (): JSX.Element => {
           <div className="footer__top">
             <h2>Want to launch your project on MultiChain?</h2>
             <a href="#" className="btn">
-              <img src="/img/rocket.png" alt />
+              <img src="/img/rocket.png"  />
               <span> Apply to Launch</span>
             </a>
           </div>
