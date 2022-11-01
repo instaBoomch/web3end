@@ -324,11 +324,11 @@ export const MainPage = (): JSX.Element => {
                   </li>
                   <li>
                     <span>Сеть: </span>
-                    <span className>Binance Smart Chain (BEP20) </span>
+                    <span>Binance Smart Chain (BEP20) </span>
                   </li>
                   <li>
                     <span>Общее предложение: </span>
-                    <span className>Эмиссия - 21 млрд. </span>
+                    <span>Эмиссия - 21 млрд. </span>
                   </li>
                   <li>
                     <span>Цена при листинге: </span>
