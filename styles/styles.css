@@ -769,5 +769,7 @@ h1 {
     margin-top: 20px;
   }
 }
-
+.header_hidden {
+  display: none !important;
+}
 /*# sourceMappingURL=maps/main.css.map */

@@ -57,23 +57,23 @@ type StateType = {
 
 type ActionType =
   | {
-      type: 'SET_WEB3_PROVIDER'
-      provider?: StateType['provider']
-      web3Provider?: StateType['web3Provider']
-      address?: StateType['address']
-      chainId?: StateType['chainId']
-    }
+    type: 'SET_WEB3_PROVIDER'
+    provider?: StateType['provider']
+    web3Provider?: StateType['web3Provider']
+    address?: StateType['address']
+    chainId?: StateType['chainId']
+  }
   | {
-      type: 'SET_ADDRESS'
-      address?: StateType['address']
-    }
+    type: 'SET_ADDRESS'
+    address?: StateType['address']
+  }
   | {
-      type: 'SET_CHAIN_ID'
-      chainId?: StateType['chainId']
-    }
+    type: 'SET_CHAIN_ID'
+    chainId?: StateType['chainId']
+  }
   | {
-      type: 'RESET_WEB3_PROVIDER'
-    }
+    type: 'RESET_WEB3_PROVIDER'
+  }
 
 const initialState: StateType = {
   provider: null,
@@ -111,7 +111,7 @@ function reducer(state: StateType, action: ActionType): StateType {
 
 export const MainPage = (): JSX.Element => {
   const [state, dispatch] = useReducer(reducer, initialState)
-  const { provider,  address, chainId } = state
+  const { provider, address, chainId } = state
   // web3Provider
   const connect = useCallback(async function () {
     // This is the initial `provider` that is returned when
@@ -202,18 +202,21 @@ export const MainPage = (): JSX.Element => {
   return (
     <div className="main-wrapper">
       <header className="header">
-        {address && (
-          <div className="grid">
-            <div>
-              <p className="mb-1">Network:</p>
-              <p>{chainData?.name}</p>
+
+        <div className="header_hidden">
+          {address && (
+            <div className="grid">
+              <div>
+                <p className="mb-1">Network:</p>
+                <p>{chainData?.name}</p>
+              </div>
+              <div>
+                <p className="mb-1">Address:</p>
+                <p>{ellipseAddress(address)}</p>
+              </div>
             </div>
-            <div>
-              <p className="mb-1">Address:</p>
-              <p>{ellipseAddress(address)}</p>
-            </div>
-          </div>
-        )}
+          )}
+        </div>
 
         <div className="container">
           <div className="header__body">
@@ -230,7 +233,7 @@ export const MainPage = (): JSX.Element => {
             </div>
             <div className="header__item">
               <a href="#" className="btn">
-                <img src="/img/pank.svg"  />
+                <img src="/img/pank.svg" />
                 <span>Buy TPAD</span>
               </a>
               <button className="btn" onClick={connect}>
@@ -246,10 +249,10 @@ export const MainPage = (): JSX.Element => {
           <div className="pad">
             <div className="pad__item pad-aside">
               <div className="pad-aside__header">
-                <img src="/img/crypto-logo.jpg" className="br50"  />
+                <img src="/img/crypto-logo.jpg" className="br50" />
                 <div>
                   <h1>SHUMI</h1>
-                  <img src="/img/open.svg"  />
+                  <img src="/img/open.svg" />
                 </div>
               </div>
               <div className="pad-aside__join">
@@ -295,7 +298,7 @@ export const MainPage = (): JSX.Element => {
             </div>
             <div className="pad__item pad-main">
               <div className="pad-main__header">
-                <img src="/img/crypto-logo.jpg" className="br50"  />
+                <img src="/img/crypto-logo.jpg" className="br50" />
                 <h3>SHUMI</h3>
               </div>
               <p className="pad-main__p">
@@ -303,16 +306,16 @@ export const MainPage = (): JSX.Element => {
                 Автоматическое начисление токенов на ваш баланс. Раздача 3 млрд
                 токенов SHUMI проходит в течении 24 часов.
               </p>
-              <img className="pad-main__img" src="/img/crypto-banner.jpg"  />
+              <img className="pad-main__img" src="/img/crypto-banner.jpg" />
               <div className="social">
                 <a href="#">
-                  <img src="/img/social/tg.svg"  />
+                  <img src="/img/social/tg.svg" />
                 </a>
                 <a href="#">
-                  <img src="/img/social/tw.svg"  />
+                  <img src="/img/social/tw.svg" />
                 </a>
                 <a href="#">
-                  <img src="/img/social/web.svg"  />
+                  <img src="/img/social/web.svg" />
                 </a>
               </div>
               <div className="pad-main__txt">
@@ -358,7 +361,7 @@ export const MainPage = (): JSX.Element => {
           <div className="footer__top">
             <h2>Want to launch your project on MultiChain?</h2>
             <a href="#" className="btn">
-              <img src="/img/rocket.png"  />
+              <img src="/img/rocket.png" />
               <span> Apply to Launch</span>
             </a>
           </div>
