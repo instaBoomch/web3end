@@ -5,7 +5,9 @@ import '../styles/styles.css'
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <Head children={<title>Etherpadium</title>}></Head>
+      <Head>
+      <title>Etherpadium</title>
+      </Head>
       <Component {...pageProps} />
     </>
   )
